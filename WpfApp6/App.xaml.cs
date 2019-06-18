@@ -16,7 +16,7 @@ namespace WpfApp6
     public partial class App : Application
     {
         static bool isCreatedNew;
-        private static Mutex mtx = new Mutex(false, "MyMutex", out isCreatedNew);
+        private  Mutex mtx = new Mutex(false, "MyMutex", out isCreatedNew);
         protected override void OnStartup(StartupEventArgs e)
         {
             if (!isCreatedNew)
